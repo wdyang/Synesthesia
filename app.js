@@ -199,3 +199,26 @@ audio.on('connection', function (audio) {
     fireworks.emit('audio', data);
   });
 });
+
+
+
+io.sockets.on('connection', function (socket) {
+
+  socket.on('move', function (data) {
+    console.log(data);
+    // socket.broadcast.emit('move', data);
+
+    // http://en.wikipedia.org/wiki/Conversion_between_quaternions_and_Euler_angles
+    // var x=data.x;
+    // var y=data.y;
+    // var z=data.z;
+    // var w=data.w/2.0/Math.PI;
+    // var phi=Math.atan(2.0*(w*x+y*z)/(1.0-2.0*(x*x+y*y)))*180/Math.PI;
+    // var theta = Math.asin(2.0*(w*y-z*x))*180/Math.PI;
+    // var psi=Math.atan(2.0*(w*z+x*y)/(1-2.0*(y*y+z*z)))*180/Math.PI;
+    // console.log(Math.floor(phi), Math.floor(theta), Math.floor(psi));
+
+
+  });
+
+});
